@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Prisma Dev | Ideas que iluminan el comercio digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Nunito:wght@400;600&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="particles-canvas-container">
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    </div>
+
+    <header class="top-bar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Prisma Dev" class="logo-image" />
+            <span>Prisma Dev</span>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="index.html#inicio">Inicio</a>
+            <a href="index.html#sobre">Sobre Nosotros</a>
+            <a href="index.html#servicios">Servicios</a>
+            <a href="index.html#portafolio">Portafolio</a>
+            <a href="index.html#testimonios">Testimonios</a>
+            <a href="index.html#planes">Planes</a>
+            <a href="blog.html" aria-current="page">Blog</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+        <button class="mode-toggle" id="modeToggle" aria-label="Cambiar modo de color">
+            <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero blog-hero section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text glass-panel" data-animate>
+                    <h1>Insights que convierten datos en ventas inteligentes.</h1>
+                    <p class="hero-subtitle">
+                        Tendencias, automatización y guías prácticas para escalar tu comercio digital con Prisma Dev.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#destacados">Ver artículos destacados</a>
+                        <a class="btn btn-secondary" href="#newsletter">Recibir novedades</a>
+                    </div>
+                </div>
+                <div class="blog-categories glass-panel" data-animate>
+                    <h2>Categorías</h2>
+                    <ul>
+                        <li><a href="#articulos-nuevos">E-commerce</a></li>
+                        <li><a href="#articulo-automatizacion">Automatización</a></li>
+                        <li><a href="#articulo-tendencias">Tendencias</a></li>
+                        <li><a href="#articulo-tiendas">Casos de éxito</a></li>
+                        <li><a href="#newsletter">Recursos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="destacados" class="blog-featured section">
+            <div class="section-heading" data-animate>
+                <h2>Artículos destacados</h2>
+                <p>Ideas que están ayudando a nuestros clientes a vender más y operar mejor.</p>
+            </div>
+            <div class="featured-grid">
+                <article class="featured-card glass-panel" data-animate>
+                    <span class="featured-tag">Caso de éxito</span>
+                    <h3 id="articulo-tiendas">Cómo Nova Boutique aumentó 45% sus ventas en 90 días</h3>
+                    <p>
+                        Te contamos el roadmap completo: automatizaciones, personalización y métricas que guiaron el crecimiento.
+                    </p>
+                    <ul>
+                        <li>Despliegue en 4 semanas.</li>
+                        <li>Dashboard Prisma Flow con insights de conversión.</li>
+                        <li>Campañas automatizadas con IA generativa.</li>
+                    </ul>
+                    <a class="blog-link" href="#">Leer estudio completo</a>
+                </article>
+                <article class="featured-card glass-panel" data-animate>
+                    <span class="featured-tag">Tendencias</span>
+                    <h3 id="articulo-tendencias">E-commerce en Latinoamérica: 7 métricas que debes monitorear</h3>
+                    <p>
+                        Analizamos los indicadores esenciales para mantenerte competitivo en 2025, integrados con nuestras soluciones.
+                    </p>
+                    <ul>
+                        <li>Ticket promedio vs. fidelidad.</li>
+                        <li>Logística inteligente y tiempos de entrega.</li>
+                        <li>Automatización de retención con IA.</li>
+                    </ul>
+                    <a class="blog-link" href="#">Explorar métricas</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="articulos-nuevos" class="blog section">
+            <div class="section-heading" data-animate>
+                <h2>Últimos artículos</h2>
+                <p>Contenido fresco para llevar tu operación a un nuevo nivel.</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card" data-animate>
+                    <h3 id="articulo-automatizacion">5 señales de que tu negocio necesita automatización</h3>
+                    <p>Detecta cuellos de botella y crea flujos inteligentes antes de que afecten a tus clientes.</p>
+                    <div class="blog-meta">
+                        <span>Lectura: 6 min</span>
+                        <span>Actualizado hace 2 días</span>
+                    </div>
+                    <a class="blog-link" href="#">Descubrir más</a>
+                </article>
+                <article class="blog-card" data-animate>
+                    <h3>Checklist para lanzar tu tienda en 30 días</h3>
+                    <p>Plan detallado de sprints, integraciones y validaciones listo para aplicar.</p>
+                    <div class="blog-meta">
+                        <span>Lectura: 9 min</span>
+                        <span>Incluye plantilla</span>
+                    </div>
+                    <a class="blog-link" href="#">Descargar guía</a>
+                </article>
+                <article class="blog-card" data-animate>
+                    <h3>Qué debes medir en tu inventario omnicanal</h3>
+                    <p>KPIs clave para mantener sincronizados tus puntos de venta físicos y digitales.</p>
+                    <div class="blog-meta">
+                        <span>Lectura: 7 min</span>
+                        <span>Incluye dashboard demo</span>
+                    </div>
+                    <a class="blog-link" href="#">Ver indicadores</a>
+                </article>
+                <article class="blog-card" data-animate>
+                    <h3>Cómo construir una experiencia post-compra memorable</h3>
+                    <p>Automatiza comunicaciones, devoluciones y programas de lealtad con Prisma Flow.</p>
+                    <div class="blog-meta">
+                        <span>Lectura: 4 min</span>
+                        <span>Plantillas incluidas</span>
+                    </div>
+                    <a class="blog-link" href="#">Activar mejoras</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="blog-resources section">
+            <div class="section-heading" data-animate>
+                <h2>Recursos descargables</h2>
+                <p>Plantillas, checklists y dashboards para acelerar tu estrategia.</p>
+            </div>
+            <div class="resources-grid">
+                <article class="resource-card glass-panel" data-animate>
+                    <h3>Template Canvas de Automatización</h3>
+                    <p>Define triggers, acciones y métricas clave en menos de 20 minutos.</p>
+                    <a class="btn btn-secondary" href="#">Descargar template</a>
+                </article>
+                <article class="resource-card glass-panel" data-animate>
+                    <h3>Dashboard demo de inventarios</h3>
+                    <p>Explora la vista Prisma Flow para ventas omnicanal y alertas en tiempo real.</p>
+                    <a class="btn btn-secondary" href="#">Probar demo</a>
+                </article>
+                <article class="resource-card glass-panel" data-animate>
+                    <h3>Guía de personalización con IA</h3>
+                    <p>Casos reales y prompts para elevar la experiencia de compra en cada canal.</p>
+                    <a class="btn btn-secondary" href="#">Obtener guía</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="newsletter" class="blog-newsletter section">
+            <div class="newsletter-panel glass-panel" data-animate>
+                <h2>Recibe cada semana ideas accionables.</h2>
+                <p>
+                    Estrategias, lanzamientos y eventos exclusivos para líderes de comercio digital. Sin spam, solo valor.
+                </p>
+                <form class="newsletter-form">
+                    <label>
+                        Correo
+                        <input type="email" name="correo" placeholder="nombre@empresa.com" required />
+                    </label>
+                    <label>
+                        ¿Qué tema te interesa más?
+                        <select name="tema" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="inventarios">Inventarios & logística</option>
+                            <option value="automatizacion">Automatización</option>
+                            <option value="ia">Inteligencia Artificial</option>
+                        </select>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Suscribirme</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Prisma Dev" class="logo-image" />
+                <span>Prisma Dev</span>
+            </div>
+            <nav class="footer-nav" aria-label="Navegación en el pie de página">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="index.html#portafolio">Portafolio</a>
+                <a href="index.html#planes">Planes</a>
+                <a href="blog.html" aria-current="page">Blog</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a>
+                <a href="https://x.com" target="_blank" rel="noreferrer noopener">X</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-meta">© 2025 Prisma Dev — Cada idea, un nuevo color en el código.</span>
+            <span class="footer-clock" id="footerClock" aria-label="Hora actual"></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prisma Dev | Innovación Multicolor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Nunito:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="particles-canvas-container">
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    </div>
+
+    <header class="top-bar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Prisma Dev" class="logo-image" />
+            <span>Prisma Dev</span>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre">Sobre Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#planes">Planes</a>
+            <a href="blog.html">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="mode-toggle" id="modeToggle" aria-label="Cambiar modo de color">
+            <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-visual" data-animate>
+                    <div class="crystal-frame">
+                        <div class="crystal-backlight"></div>
+                        <img src="logo.jpg" alt="Logo Prisma Dev" class="crystal-image" />
+                        <div class="crystal-reflection crystal-reflection--top"></div>
+                        <div class="crystal-reflection crystal-reflection--bottom"></div>
+                        <div class="crystal-orbit crystal-orbit--cyan"></div>
+                        <div class="crystal-orbit crystal-orbit--magenta"></div>
+                    </div>
+                </div>
+                <div class="hero-text" data-animate>
+                    <h1>Cada idea, un nuevo color en el código.</h1>
+                    <p class="hero-subtitle">Desarrollamos soluciones inteligentes para comercio electrónico, gestión de inventarios y ventas.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#planes">Crea tu tienda ahora</a>
+                        <a class="btn btn-secondary" href="#contacto">Agenda una demo gratuita</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about section">
+            <div class="section-heading" data-animate>
+                <h2>Sobre Nosotros</h2>
+                <p>Cada idea, un nuevo color en el código.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-animate>
+                    <div class="about-block">
+                        <h3>Misión</h3>
+                        <p>Simplificar el comercio digital con tecnología clara, moderna y adaptable.</p>
+                    </div>
+                    <div class="about-block">
+                        <h3>Visión</h3>
+                        <p>Ser la marca que impulsa la nueva generación de negocios inteligentes en Latinoamérica.</p>
+                    </div>
+                    <div class="about-block about-block--values">
+                        <h3>Valores</h3>
+                        <ul>
+                            <li>Innovación</li>
+                            <li>Claridad</li>
+                            <li>Confianza</li>
+                            <li>Automatización</li>
+                            <li>Soporte humano</li>
+                        </ul>
+                    </div>
+                    <div class="about-block">
+                        <h3>Nuestra historia</h3>
+                        <p>Nacimos de la idea de que cada negocio, grande o pequeño, merece herramientas de nivel profesional.</p>
+                    </div>
+                </div>
+                <div class="about-visual" data-animate aria-hidden="true">
+                    <div class="about-prism">
+                        <div class="about-prism__core"></div>
+                        <div class="about-prism__halo"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services section">
+            <div class="section-heading" data-animate>
+                <h2>Servicios</h2>
+                <p>Explicamos qué hacemos con foco en los resultados de tu negocio.</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card" data-animate>
+                    <div class="service-icon service-icon--ecommerce" aria-hidden="true"></div>
+                    <h3>Desarrollo de Tiendas Online</h3>
+                    <p>Crea tu e-commerce totalmente personalizado, optimizado para vender más.</p>
+                    <ul>
+                        <li>Catálogo y gestión de productos</li>
+                        <li>Carrito y pagos en línea</li>
+                        <li>Panel administrativo intuitivo</li>
+                    </ul>
+                </article>
+                <article class="service-card" data-animate>
+                    <div class="service-icon service-icon--inventory" aria-hidden="true"></div>
+                    <h3>Gestión de Inventarios y Ventas</h3>
+                    <p>Control total de tus existencias, movimientos y reportes.</p>
+                    <ul>
+                        <li>Control de stock automatizado</li>
+                        <li>Sincronización con múltiples canales</li>
+                        <li>Alertas y reportes en tiempo real</li>
+                    </ul>
+                </article>
+                <article class="service-card" data-animate>
+                    <div class="service-icon service-icon--custom" aria-hidden="true"></div>
+                    <h3>Sistemas Personalizados</h3>
+                    <p>Construimos soluciones hechas a tu medida.</p>
+                    <ul>
+                        <li>ERP ligeros</li>
+                        <li>Dashboards personalizados</li>
+                        <li>Integraciones con APIs</li>
+                    </ul>
+                </article>
+                <article class="service-card" data-animate>
+                    <div class="service-icon service-icon--saas" aria-hidden="true"></div>
+                    <h3>Plataforma SaaS — Prisma Flow</h3>
+                    <p>Centraliza tus operaciones desde la nube.</p>
+                    <ul>
+                        <li>Multiusuario</li>
+                        <li>Suscripción mensual</li>
+                        <li>Escalable y seguro</li>
+                    </ul>
+                </article>
+                <article class="service-card" data-animate>
+                    <div class="service-icon service-icon--ai" aria-hidden="true"></div>
+                    <h3>Integraciones Inteligentes</h3>
+                    <p>Conectamos tu tienda con herramientas de IA, marketing y automatización.</p>
+                    <ul>
+                        <li>Chatbots de atención</li>
+                        <li>Recomendaciones inteligentes</li>
+                        <li>Automatización de correos y pedidos</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="portafolio" class="portfolio section">
+            <div class="section-heading" data-animate>
+                <h2>Portafolio</h2>
+                <p>Resultados reales de negocios que confiaron en Prisma Dev.</p>
+            </div>
+            <div class="portfolio-grid">
+                <article class="project-card" data-animate>
+                    <div class="project-overlay"></div>
+                    <div class="project-meta">
+                        <span class="project-result">+45% ventas</span>
+                    </div>
+                    <h3>Nova Boutique</h3>
+                    <p>Tienda personalizada con campañas automatizadas y dashboard de ventas.</p>
+                    <span class="project-stack">React · Next.js · Stripe · Prisma Flow</span>
+                </article>
+                <article class="project-card" data-animate>
+                    <div class="project-overlay"></div>
+                    <div class="project-meta">
+                        <span class="project-result">3x productividad</span>
+                    </div>
+                    <h3>Distribuidora Andes</h3>
+                    <p>Control de inventario en tiempo real con reportes automáticos.</p>
+                    <span class="project-stack">NestJS · Prisma · AWS · AppSync</span>
+                </article>
+                <article class="project-card" data-animate>
+                    <div class="project-overlay"></div>
+                    <div class="project-meta">
+                        <span class="project-result">+62% recurrencia</span>
+                    </div>
+                    <h3>Mercato Verde</h3>
+                    <p>Marketplace sostenible con recomendaciones inteligentes de productos.</p>
+                    <span class="project-stack">Shopify Headless · Remix · IA</span>
+                </article>
+                <article class="project-card" data-animate>
+                    <div class="project-overlay"></div>
+                    <div class="project-meta">
+                        <span class="project-result">99.9% uptime</span>
+                    </div>
+                    <h3>Prisma Flow Demo</h3>
+                    <p>Dashboard interactivo para visualizar operaciones y métricas en vivo.</p>
+                    <span class="project-stack">Next.js · Supabase · Vercel</span>
+                </article>
+            </div>
+            <div class="portfolio-actions" data-animate>
+                <a class="btn btn-primary" href="#contacto">Quiero un proyecto así</a>
+                <a class="btn btn-ghost" href="#">Ver demo interactiva</a>
+            </div>
+        </section>
+
+        <section id="testimonios" class="testimonials section">
+            <div class="section-heading" data-animate>
+                <h2>Testimonios</h2>
+                <p>Opiniones que respaldan nuestro impacto.</p>
+            </div>
+            <div class="testimonials-grid">
+                <article class="testimonial-card" data-animate>
+                    <img src="https://i.pravatar.cc/120?img=32" alt="Retrato de Laura Gómez" />
+                    <div class="testimonial-content">
+                        <p>“Gracias a Prisma Dev, nuestra tienda funciona sola. ¡El control de inventario es automático!”</p>
+                        <span class="name">Laura Gómez</span>
+                        <span class="role">Emprendedora</span>
+                    </div>
+                </article>
+                <article class="testimonial-card" data-animate>
+                    <img src="https://i.pravatar.cc/120?img=47" alt="Retrato de Carlos R." />
+                    <div class="testimonial-content">
+                        <p>“La plataforma SaaS nos permitió escalar sin perder control.”</p>
+                        <span class="name">Carlos R.</span>
+                        <span class="role">Distribuidor mayorista</span>
+                    </div>
+                </article>
+                <article class="testimonial-card" data-animate>
+                    <img src="https://i.pravatar.cc/120?img=15" alt="Retrato de Ana Torres" />
+                    <div class="testimonial-content">
+                        <p>“Su soporte humano y automatizaciones nos ahorran horas cada semana.”</p>
+                        <span class="name">Ana Torres</span>
+                        <span class="role">CMO · RetailGo</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="planes" class="pricing section">
+            <div class="section-heading" data-animate>
+                <h2>Planes y Precios</h2>
+                <p>Elige el plan que mejor se adapta a tu crecimiento.</p>
+            </div>
+            <div class="pricing-grid">
+                <article class="pricing-card" data-animate>
+                    <h3>Starter</h3>
+                    <p class="pricing-description">Tienda base + control de inventario.</p>
+                    <p class="pricing-price">$0 <span>/ demo 14 días</span></p>
+                    <ul>
+                        <li>Lanzamiento guiado</li>
+                        <li>Catálogo ilimitado</li>
+                        <li>Soporte por chat</li>
+                    </ul>
+                    <a class="btn btn-secondary" href="#contacto">Comienza ahora</a>
+                </article>
+                <article class="pricing-card pricing-card--highlight" data-animate>
+                    <h3>Business</h3>
+                    <p class="pricing-description">Funciones avanzadas + reportes.</p>
+                    <p class="pricing-price">$49.000 <span>/ mes</span></p>
+                    <ul>
+                        <li>Reportes inteligentes</li>
+                        <li>Integraciones con marketplaces</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <a class="btn btn-primary" href="#contacto">Solicita demo</a>
+                </article>
+                <article class="pricing-card" data-animate>
+                    <h3>Enterprise</h3>
+                    <p class="pricing-description">Integraciones personalizadas a medida.</p>
+                    <p class="pricing-price">A medida</p>
+                    <ul>
+                        <li>Consultoría estratégica</li>
+                        <li>Integraciones con ERP</li>
+                        <li>Soporte dedicado 24/7</li>
+                    </ul>
+                    <a class="btn btn-secondary" href="#contacto">Solicita cotización</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="blog" class="blog section">
+            <div class="section-heading" data-animate>
+                <h2>Blog & Recursos</h2>
+                <p>Ideas para liderar el comercio digital en 2025.</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card" data-animate>
+                    <h3>Cómo crear tu tienda online en 2025 sin programar</h3>
+                    <p>Guía paso a paso para lanzar tu e-commerce con herramientas modernas.</p>
+                    <a class="blog-link" href="blog.html#articulo-tiendas">Leer artículo</a>
+                </article>
+                <article class="blog-card" data-animate>
+                    <h3>5 señales de que tu negocio necesita automatización</h3>
+                    <p>Identifica cuellos de botella y libera tiempo para vender más.</p>
+                    <a class="blog-link" href="blog.html#articulo-automatizacion">Descubrir más</a>
+                </article>
+                <article class="blog-card" data-animate>
+                    <h3>Tendencias del e-commerce en Latinoamérica</h3>
+                    <p>Insights listos para aplicar en tu estrategia digital.</p>
+                    <a class="blog-link" href="blog.html#articulo-tendencias">Ver tendencias</a>
+                </article>
+            </div>
+            <div class="blog-actions" data-animate>
+                <a class="btn btn-primary" href="blog.html">Explorar blog completo</a>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact section">
+            <div class="section-heading" data-animate>
+                <h2>Contacto</h2>
+                <p>¿Listo para darle forma a tu idea?</p>
+            </div>
+            <div class="contact-layout">
+                <form class="contact-form" data-animate>
+                    <label>
+                        Nombre
+                        <input type="text" name="nombre" placeholder="¿Cómo te llamas?" required />
+                    </label>
+                    <label>
+                        Correo
+                        <input type="email" name="correo" placeholder="nombre@empresa.com" required />
+                    </label>
+                    <label>
+                        Tipo de servicio
+                        <select name="servicio" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="tiendas">Tienda online</option>
+                            <option value="inventarios">Inventarios y ventas</option>
+                            <option value="personalizado">Sistema a medida</option>
+                            <option value="prisma-flow">Prisma Flow</option>
+                            <option value="integraciones">Integraciones inteligentes</option>
+                        </select>
+                    </label>
+                    <label class="full-width">
+                        Mensaje
+                        <textarea name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Comencemos</button>
+                </form>
+                <div class="contact-info" data-animate>
+                    <h3>Hablemos</h3>
+                    <p>Agenda una llamada, escríbenos al instante o visita nuestro centro de recursos.</p>
+                    <ul class="contact-list">
+                        <li><strong>WhatsApp:</strong> <a href="https://wa.me/573001112233" target="_blank" rel="noreferrer noopener">+57 300 111 2233</a></li>
+                        <li><strong>Telegram:</strong> <a href="https://t.me/prismadev" target="_blank" rel="noreferrer noopener">@prismadev</a></li>
+                        <li><strong>Correo:</strong> <a href="mailto:prismadevcol@gmail.com">prismadevcol@gmail.com</a></li>
+                    </ul>
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a>
+                        <a href="https://x.com" target="_blank" rel="noreferrer noopener">X</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Prisma Dev" class="logo-image" />
+                <span>Prisma Dev</span>
+            </div>
+            <nav class="footer-nav" aria-label="Navegación en el pie de página">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#planes">Planes</a>
+                <a href="blog.html">Blog</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a>
+                <a href="https://x.com" target="_blank" rel="noreferrer noopener">X</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-meta">© 2025 Prisma Dev — Cada idea, un nuevo color en el código.</span>
+            <span class="footer-clock" id="footerClock" aria-label="Hora actual"></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
