@@ -180,6 +180,46 @@ function initSmoothAnchorScroll() {
     });
 }
 
+function initMobileNav() {
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (!navToggle || !mainNav) return;
+
+    navToggle.setAttribute('aria-expanded', 'false');
+    mainNav.setAttribute('aria-hidden', 'true');
+
+    const closeMenu = () => {
+        navToggle.classList.remove('is-open');
+        mainNav.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        mainNav.setAttribute('aria-hidden', 'true');
+    };
+
+    navToggle.addEventListener('click', () => {
+        const isOpen = navToggle.classList.toggle('is-open');
+        mainNav.classList.toggle('is-open', isOpen);
+        document.body.classList.toggle('nav-open', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        mainNav.setAttribute('aria-hidden', String(!isOpen));
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navToggle.classList.contains('is-open')) {
+                closeMenu();
+            }
+        });
+    });
+
+    const desktopMediaQuery = window.matchMedia('(min-width: 961px)');
+    desktopMediaQuery.addEventListener('change', event => {
+        if (event.matches) {
+            closeMenu();
+        }
+    });
+}
+
 function initContactForm() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
@@ -255,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFooterClock();
     initRevealAnimations();
     initSmoothAnchorScroll();
+    initMobileNav();
     initContactForm();
     injectToastStyles();
     mountParticles();

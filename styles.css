@@ -51,6 +51,16 @@ body {
     position: relative;
 }
 
+body.nav-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(4, 8, 16, 0.68), rgba(2, 6, 16, 0.82));
+    backdrop-filter: blur(12px);
+    z-index: 6;
+    pointer-events: none;
+}
+
 body::before {
     content: "";
     position: fixed;
@@ -141,15 +151,22 @@ img {
 .top-bar {
     position: sticky;
     top: 0;
-    z-index: 8;
+    z-index: 12;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
     padding: 1.25rem clamp(1.5rem, 6vw, 4rem);
-    backdrop-filter: blur(24px) saturate(130%);
-    background: linear-gradient(120deg, rgba(4, 8, 16, 0.82), rgba(6, 12, 28, 0.62));
-    border-bottom: 1px solid var(--glass-border);
-    box-shadow: 0 18px 50px rgba(0, 15, 35, 0.45);
+    backdrop-filter: blur(28px) saturate(140%);
+    background: linear-gradient(120deg, rgba(4, 8, 16, 0.78), rgba(10, 22, 44, 0.68));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: clamp(1.2rem, 4vw, 2rem);
+    margin: clamp(1rem, 4vw, 2rem);
+    box-shadow: 0 18px 55px rgba(0, 20, 40, 0.55), 0 0 45px rgba(0, 224, 255, 0.12);
+    position: sticky;
+    width: min(1100px, calc(100% - clamp(2rem, 8vw, 4rem)));
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo {
@@ -199,6 +216,54 @@ img {
     }
 }
 
+.mobile-nav-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: linear-gradient(145deg, rgba(12, 22, 46, 0.85), rgba(0, 0, 0, 0.65));
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.mobile-nav-toggle span,
+.mobile-nav-toggle::before,
+.mobile-nav-toggle::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.mobile-nav-toggle::before {
+    position: absolute;
+    transform: translateY(-7px);
+}
+
+.mobile-nav-toggle::after {
+    position: absolute;
+    transform: translateY(7px);
+}
+
+.mobile-nav-toggle.is-open span {
+    opacity: 0;
+}
+
+.mobile-nav-toggle.is-open::before {
+    transform: rotate(45deg);
+}
+
+.mobile-nav-toggle.is-open::after {
+    transform: rotate(-45deg);
+}
+
 .main-nav {
     display: flex;
     gap: 1.5rem;
@@ -209,6 +274,9 @@ img {
 
 .main-nav a {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text-muted);
     transition: color var(--transition), transform var(--transition);
 }
@@ -1753,18 +1821,47 @@ img {
         order: 1;
     }
 
-    .mode-toggle {
+    .mobile-nav-toggle {
+        display: grid;
         order: 2;
+    }
+
+    .mode-toggle {
+        order: 4;
     }
 
     .main-nav {
         order: 3;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.9rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
         width: 100%;
-        font-size: 0.85rem;
+        margin-top: 0.5rem;
+        padding: 1.1rem 1.25rem;
+        border-radius: 1.25rem;
+        background: linear-gradient(145deg, rgba(12, 24, 52, 0.85), rgba(2, 8, 20, 0.65));
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 18px 55px rgba(0, 20, 48, 0.5);
+        font-size: 0.86rem;
+        backdrop-filter: blur(30px) saturate(160%);
+    }
+
+    .main-nav.is-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem 1rem;
+        border-radius: 0.95rem;
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .main-nav a::after {
+        display: none;
     }
 
     .hero-content {
@@ -1822,6 +1919,10 @@ img {
         justify-content: center;
         width: 100%;
     }
+}
+
+body.nav-open {
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
