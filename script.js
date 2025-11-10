@@ -12,22 +12,6 @@ const colors = [
     'rgba(127, 93, 255, 0.45)',
 ];
 
-function initModeToggle() {
-    const toggle = document.getElementById('modeToggle');
-    if (!toggle) return;
-
-    const storedMode = localStorage.getItem('prisma-theme');
-    if (storedMode === 'light') {
-        document.body.classList.add('light-mode');
-    }
-
-    toggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        const mode = document.body.classList.contains('light-mode') ? 'light' : 'dark';
-        localStorage.setItem('prisma-theme', mode);
-    });
-}
-
 function initFooterClock() {
     const clockEl = document.getElementById('footerClock');
     if (!clockEl) return;
@@ -291,7 +275,6 @@ function injectToastStyles() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    initModeToggle();
     initFooterClock();
     initRevealAnimations();
     initSmoothAnchorScroll();
